@@ -38,6 +38,7 @@ app.get("/api/rappers/:rapperName", (request, response) => {
   }
 });
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
+  // the "process.env.PORT" is for heroku port process because obvioulsy 8000 is not supported
   console.log(`Server running on port ${PORT}`);
 });
